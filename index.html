@@ -49,8 +49,9 @@
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
             transition: transform 0.3s ease, background 0.3s ease;
             animation: neon-glow 1.5s infinite alternate;
+            touch-action: manipulation;
         }
-        .celebrate-btn:hover {
+        .celebrate-btn:hover, .celebrate-btn:active {
             background: #ff1a1a;
             transform: scale(1.1);
         }
@@ -85,7 +86,7 @@
 </head>
 <body>
     <h1 id="holiText">🎨 Happy Holi! 🎉</h1>
-    <button class="celebrate-btn" onclick="celebrate()">More Colors</button>
+    <button class="celebrate-btn" onclick="celebrate()" ontouchstart="celebrate()">Celebrate</button>
 
     <script>
         function createColorSplash(x, y) {
